@@ -1,0 +1,22 @@
+{
+    "appDesc": {
+        "message": "last.fm charts for vk.com/audio",
+        "description": ""
+    },
+    "number_of_tracks": {
+        "message": "Number of tracks",
+        "description": ""
+    },
+    "save": {
+        "message": "Save",
+        "description": ""
+    },
+    "oh_my_audio_charts_options": {
+        "message": "Oh My Audio Charts",
+        "description": ""
+    },
+    "saved": {
+        "message": "Options saved.",
+        "description": ""
+    }
+}
