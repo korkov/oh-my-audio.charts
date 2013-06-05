@@ -18,7 +18,6 @@
     },
     "options_page": "options.html",
     "web_accessible_resources": [ "lib/jquery.min.js", "lib/lastfm.api.md5.js", "lib/lastfm.api.js", "oh-my-audio.charts.user.js" ],
-    "converted_from_user_script": true,
     "description": "__MSG_appDesc__",
     "name": "Oh My Audio Charts",
     "default_locale": "en",

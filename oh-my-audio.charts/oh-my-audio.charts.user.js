@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Oh My Audio Charts!
+// @name        Oh My Audio Charts
 // @author   	Alexander Korkov
 // @description last.fm charts for vk.com/audio
 // @include   	http://vk.com/*
