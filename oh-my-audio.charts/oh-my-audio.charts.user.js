@@ -47,10 +47,11 @@
                 };
             }
 
-            this.audio_menu_item = function(desc, fn) {
+            this.audio_menu_item = function(desc, title, fn) {
                 var d = $('<div>', {
                     mouseout:  function() { if (Audio.listOut)  Audio.listOut(this); },
                     mouseover: function() { if (Audio.listOver) Audio.listOver(this); },
+                    title: title,
                     class: "audio_filter",
                 }).append($("<div>", {
                     class: "label",
@@ -258,9 +259,9 @@
 
             this.create_menu = function() {
                 var items = [
-                    vk_page.audio_menu_item(_("Popular on last.fm"), vk_audio.loader(lfm_api.top)),
-                    vk_page.audio_menu_item(_("Loved on last.fm"), vk_audio.loader(lfm_api.loved)),
-                    vk_page.audio_menu_item(_("Hyped on last.fm"), vk_audio.loader(lfm_api.hyped)),
+                    vk_page.audio_menu_item(_("Popular on last.fm"), _("Tracks with the most listeners"), vk_audio.loader(lfm_api.top)),
+                    vk_page.audio_menu_item(_("Loved on last.fm"), _("Tracks loved by the most listeners"), vk_audio.loader(lfm_api.loved)),
+                    vk_page.audio_menu_item(_("Hyped on last.fm"), _("The fastest rising tracks"), vk_audio.loader(lfm_api.hyped)),
                 ];
                 items.forEach(function(item) { vk_page.append_to_main_menu(item); });
             }
@@ -277,6 +278,18 @@
         dictionary["Hyped on last.fm"] = {
             "ru": "\u041D\u0430\u0431\u0438\u0440\u0430\u0435\u0442\u0020\u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u043E\u0441\u0442\u044C\u0020\u043D\u0430\u0020\u006C\u0061\u0073\u0074\u002E\u0066\u006D", // Набирает популярность на last.fm
             "ua": "\u041D\u0430\u0431\u0438\u0440\u0430\u0435\u0442\u0020\u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u043E\u0441\u0442\u044C\u0020\u043D\u0430\u0020\u006C\u0061\u0073\u0074\u002E\u0066\u006D", // Набирает популярность на last.fm
+        };
+        dictionary["The fastest rising tracks"] = {
+            "ru": "\u041A\u043E\u043C\u043F\u043E\u0437\u0438\u0446\u0438\u0438, \u0431\u044B\u0441\u0442\u0440\u043E \u043D\u0430\u0431\u0438\u0440\u0430\u044E\u0449\u0438\u0435 \u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u043E\u0441\u0442\u044C",
+            "ua": "\u041A\u043E\u043C\u043F\u043E\u0437\u0438\u0446\u0438\u0438, \u0431\u044B\u0441\u0442\u0440\u043E \u043D\u0430\u0431\u0438\u0440\u0430\u044E\u0449\u0438\u0435 \u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u043E\u0441\u0442\u044C",
+        };
+        dictionary["Tracks with the most listeners"] = {
+            "ru": "\u041A\u043E\u043C\u043F\u043E\u0437\u0438\u0446\u0438\u0438 \u0441 \u043D\u0430\u0438\u0431\u043E\u043B\u044C\u0448\u0438\u043C \u0447\u0438\u0441\u043B\u043E\u043C \u0441\u043B\u0443\u0448\u0430\u0442\u0435\u043B\u0435\u0439",
+            "ua": "\u041A\u043E\u043C\u043F\u043E\u0437\u0438\u0446\u0438\u0438 \u0441 \u043D\u0430\u0438\u0431\u043E\u043B\u044C\u0448\u0438\u043C \u0447\u0438\u0441\u043B\u043E\u043C \u0441\u043B\u0443\u0448\u0430\u0442\u0435\u043B\u0435\u0439",
+        };
+        dictionary["Tracks loved by the most listeners"] = {
+            "ru": "\u041A\u043E\u043C\u043F\u043E\u0437\u0438\u0446\u0438\u0438, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043E\u0442\u043C\u0435\u0447\u0435\u043D\u044B \u043A\u0430\u043A \u043B\u044E\u0431\u0438\u043C\u044B\u0435 \u043D\u0430\u0438\u0431\u043E\u043B\u044C\u0448\u0438\u043C \u0447\u0438\u0441\u043B\u043E\u043C \u0441\u043B\u0443\u0448\u0430\u0442\u0435\u043B\u0435\u0439",
+            "ua": "\u041A\u043E\u043C\u043F\u043E\u0437\u0438\u0446\u0438\u0438, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043E\u0442\u043C\u0435\u0447\u0435\u043D\u044B \u043A\u0430\u043A \u043B\u044E\u0431\u0438\u043C\u044B\u0435 \u043D\u0430\u0438\u0431\u043E\u043B\u044C\u0448\u0438\u043C \u0447\u0438\u0441\u043B\u043E\u043C \u0441\u043B\u0443\u0448\u0430\u0442\u0435\u043B\u0435\u0439",
         };
 
         function init() {
