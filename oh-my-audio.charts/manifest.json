@@ -3,7 +3,7 @@
 
    "content_scripts": [ {
        "js": [ "main.js" ],
-      "matches": [ "http://vk.com/*" ],
+       "matches": [ "http://vk.com/*", "https://vk.com/*" ],
       "run_at": "document_end"
    } ],
    "icons": {

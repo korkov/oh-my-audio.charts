@@ -3,12 +3,14 @@
 // @author   	Alexander Korkov
 // @description last.fm charts for vk.com/audio
 // @include   	http://vk.com/*
+// @include   	https://vk.com/*
 // @copyright   2013+, Alexander Korkov korkov@yandex.ru
 // @namespace   http://vk.com/*
+// @namespace   https://vk.com/*
 // @version     1.0
 // @grant       none
 // @downloadURL http://userscripts.org/scripts/source/169676.user.js
-// @require     http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js
 // @require     https://raw.github.com/fxb/javascript-last.fm-api/master/lastfm.api.md5.js
 // @require     https://raw.github.com/fxb/javascript-last.fm-api/master/lastfm.api.js
 // @run-at      document-end
